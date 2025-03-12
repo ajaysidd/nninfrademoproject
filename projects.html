@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | NN Infra Developers</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("proj.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f6f3;
+  padding: 10px;
+  position: relative;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height */
+}
+
+.hamburger {
+  font-size: 30px;
+  color: rgb(11, 10, 10);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-content {
+  display: flex; /* Display items in a row */
+  
+}
+
+.nav-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display items in a row */
+}
+
+.nav-content li {
+  padding: 10px;
+}
+
+.nav-content li a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(20, 19, 19);
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+}
+
+.nav-content li a:hover {
+  text-decoration: underline;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon on small screens */
+  }
+
+  .nav-content {
+      display: none; /* Hide nav content by default */
+      position: absolute;
+      background-color: #ffffff;
+      border-radius: 10px;
+      top: 50px; /* Adjust based on your navbar height */
+      right: 0; /* Align to the right end */
+      width: 200px; /* Set a width for the dropdown */
+      z-index: 1;
+  }
+
+  .nav-content ul {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-content.show {
+      display: flex; /* Show nav content when toggled */
+  }
+}
+        /* Header */
+        .header-title {
+            font-size: 3rem;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+
+        /* Slider Container */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Navigation Buttons */
+        .controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .prev:hover, .next:hover {
+            background: #f4a261;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .slider-container {
+                max-width: 90%;
+            }
+
+            .prev, .next {
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 1.8rem;
+            }
+
+            .prev, .next {
+                padding: 8px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" />
+        </div>
+        <div class="nav-content" id="navContent">
+            <ul>
+                <li><a href="main1.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="founder.html">Founder</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="values.html">Values</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </div>
+
+
+    <!-- Page Title -->
+    <h1 class="header-title">Our Projects</h1>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="slider">
+            <div class="slide"><img src="nn9.png" alt="Project 1"></div>
+            <video class="slide" autoplay muted loop playsinline>
+                <source src="nnv2.mp4" type="video/mp4">
+            </video>
+            <div class="slide"><img src="nn2.jpg" alt="Project 2"></div>
+            <div class="slide"><img src="nn3.jpg" alt="Project 3"></div>
+            <div class="slide"><img src="nn14.png" alt="Project 4"></div>
+            <div class="slide"><img src="nn.jpg" alt="Project 5"></div>
+            <div class="slide"><img src="nn4.jpg" alt="Project 6"></div>
+            <div class="slide"><img src="nn5.jpg" alt="Project 7"></div>
+            <div class="slide"><img src="nn7.jpg" alt="Project 9"></div>
+            <div class="slide"><img src="nn7.jpg" alt="image 7"></div>
+            <div class="slide"><img src="nn8.jpg" alt="image 8"></div>
+            <div class="slide"><img src="nn10.jpg" alt="image 9"></div>
+            <div class="slide"><img src="nn11.jpg" alt="image 10"></div>
+            <div class="slide"><img src="nn12.jpg" alt="image 11"></div>
+            <div class="slide"><img src="nn13.jpg" alt="image 12"></div>
+            <div class="slide"><img src="nn15.jpg" alt="image 13"></div>
+            <div class="slide"><img src="nnn2.jpg" alt="image 14"></div>
+            <div class="slide"><img src="nnn1.jpg" alt="image 15"></div>
+            <video class="slide" autoplay muted loop playsinline>
+                <source src="nnv1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    
+    <script>
+        //navbar hamburger
+  const hamburger = document.getElementById('hamburger');
+const navContent = document.getElementById('navContent');
+
+hamburger.addEventListener('click', () => {
+    navContent.classList.toggle('show'); // Toggle the 'show' class
+});
+
+// Close the nav content when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navContent.contains(event.target)) {
+        navContent.classList.remove('show'); // Remove the 'show' class
+    }
+});
+
+
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(i) {
+            slides.forEach((slide, idx) => {
+                slide.style.display = (idx === i) ? "block" : "none";
+            });
+        }
+
+        function moveSlide(step) {
+            index += step;
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+            showSlide(index);
+        }
+
+        // Auto-Slide Function
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        // Initialize
+        showSlide(index);
+        setInterval(autoSlide, 3000); // Auto-slide every 3 seconds
+    </script>
+
+</body>
+</html>
