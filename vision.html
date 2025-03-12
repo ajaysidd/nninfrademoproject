@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("visionnew.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f6f3;
+  padding: 10px;
+  position: relative;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height */
+}
+
+.hamburger {
+  font-size: 30px;
+  color: rgb(11, 10, 10);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-content {
+  display: flex; /* Display items in a row */
+  
+}
+
+.nav-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display items in a row */
+}
+
+.nav-content li {
+  padding: 10px;
+}
+
+.nav-content li a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(20, 19, 19);
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+}
+
+.nav-content li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon on small screens */
+  }
+
+  .nav-content {
+      display: none; /* Hide nav content by default */
+      position: absolute;
+      background-color: #fbf8f8;
+      border-radius: 10px;
+      top: 50px; /* Adjust based on your navbar height */
+      right: 0; /* Align to the right end */
+      width: 200px; /* Set a width for the dropdown */
+      z-index: 1;
+  }
+
+  .nav-content ul {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-content.show {
+      display: flex; /* Show nav content when toggled */
+  }
+}
+
+        .container1, .container2 {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgb(221, 215, 167);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            font-family: 'Merriweather', serif;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .vision {
+            background-color: #e8f6ff;
+            border-left: 6px solid #3498db;
+        }
+
+        .mission {
+            background-color: #fef5e7;
+            border-left: 6px solid #f39c12;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        header {
+            background-color: white;
+            color: #070707;
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-size: 20px;
+            padding-left: 30px;
+            margin: 10px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container1, .container2 {
+                max-width: 90%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p, ul li {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Navigation Bar -->
+     <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" />
+        </div>
+        <div class="nav-content" id="navContent">
+            <ul>
+                <li><a href="main1.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="founder.html">Founder</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="values.html">Values</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </div>
+
+    <div class="container1">
+        <h1>Our Vision & Mission</h1>
+
+        <div class="section vision">
+            <h2>Our Vision</h2>
+            <p>At <span class="highlight">NN Infra Developers</span>, we envision transforming the infrastructure development industry by integrating sustainable practices and cutting-edge technologies. Our goal is to create projects that not only fulfill present client needs but also foster long-term community growth and development. Through innovative designs and eco-conscious strategies, we aim to set new benchmarks in real estate and infrastructure. We aspire to be recognized as a name synonymous with <span class="highlight">excellence, trust, and innovation</span>, continuously evolving while upholding our core values of <span class="highlight">integrity, quality, and customer satisfaction</span>.</p>
+        </div>
+
+        <div class="section mission">
+            <h2>Our Mission</h2>
+            <p>Our mission at <span class="highlight">NN Infra Developers</span> is to deliver <span class="highlight">high-quality infrastructure solutions</span> that go beyond client expectations while promoting <span class="highlight">sustainability</span>. We are committed to integrating <span class="highlight">innovative technologies, eco-friendly practices, and meticulous planning</span> to ensure each project reflects our dedication to excellence. From concept to completion, we prioritize <span class="highlight">precision, integrity, and customer satisfaction</span> in every aspect of our work. By adhering to the highest standards of <span class="highlight">professionalism and ethical business practices</span>, we strive to build long-term relationships with our clients, partners, and communities.</p>
+        </div>
+    </div>
+
+    <header>Our Services </header>
+    <div class="container2">
+        <section>
+            <h2>Real Estate Development</h2>
+            <ul>
+                <li>Residential and Commercial Property Development</li>
+                <li>Land Acquisition and Project Planning</li>           
+            </ul>
+        </section>
+        <section>
+            <h2>Property Sales & Consultation</h2>
+            <ul>
+                <li>Sale of Open Plots and Residential Units</li>
+                <li>Land Investment Advice and Market Analysis</li>
+                <li>Consultation for Property Development and Real Estate Projects</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Project Management</h2>
+            <ul>
+                <li>End-to-End Project Management Services</li>
+                <li>Feasibility Studies and Site Evaluation</li>
+                <li>Budgeting, Cost Estimation, and Resource Management</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Eco Resort Development</h2>
+            <ul>
+                <li>Design and Build of Eco Resorts</li>
+                <li>Green Land and Eco-friendly Development Solutions</li>
+                <li>Landscape Planning and Development</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Farm Land Development</h2>
+            <ul>
+                <li>Development of Farm Lands for Agricultural and Commercial Use</li>
+                <li>Agricultural Infrastructure Planning (Water Management, Irrigation, etc.)</li>
+                <li>Farm Land Sales and Investment Opportunities</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+         //navbar hamburger
+  const hamburger = document.getElementById('hamburger');
+const navContent = document.getElementById('navContent');
+
+hamburger.addEventListener('click', () => {
+    navContent.classList.toggle('show'); // Toggle the 'show' class
+});
+
+// Close the nav content when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navContent.contains(event.target)) {
+        navContent.classList.remove('show'); // Remove the 'show' class
+    }
+});
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Values</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e8c9;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f6f3;
+  padding: 10px;
+  position: relative;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height */
+}
+
+.hamburger {
+  font-size: 30px;
+  color: rgb(11, 10, 10);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-content {
+  display: flex; /* Display items in a row */
+  
+}
+
+.nav-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display items in a row */
+}
+
+.nav-content li {
+  padding: 10px;
+}
+
+.nav-content li a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(20, 19, 19);
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+}
+
+.nav-content li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon on small screens */
+  }
+
+  .nav-content {
+      display: none; /* Hide nav content by default */
+      position: absolute;
+      background-color: #fbf8f8;
+      border-radius: 10px;
+      top: 50px; /* Adjust based on your navbar height */
+      right: 0; /* Align to the right end */
+      width: 200px; /* Set a width for the dropdown */
+      z-index: 1;
+  }
+
+  .nav-content ul {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-content.show {
+      display: flex; /* Show nav content when toggled */
+  }
+}
+
+
+        .container {
+            max-width: 80%;
+            margin: 120px auto;
+            padding: 40px;
+            background: #B1C29E;
+            border-radius: 8px;
+            color: #333333;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.1rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h2 {
+            color: #2e7d32;
+            font-size: 2rem;
+        }
+        .highlight {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .values {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .values li {
+            background: #CAE0BC;
+            color: #333333;
+            margin: 5px;
+            padding: 15px;
+            border-radius: 5px;
+            width: 45%;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .values li {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" />
+        </div>
+        <div class="nav-content" id="navContent">
+            <ul>
+                <li><a href="main1.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="founder.html">Founder</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="values.html">Values</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </div>
+
+    <section>
+    <div class="container">
+        <h1>Welcome to NN Infra Developers</h1>
+        
+        <div class="section">
+            <h2>Sustainable Innovation</h2>
+            <p>At NN Infra Developers, we aspire to redefine infrastructure development by incorporating sustainable practices and cutting-edge technology. Our mission is to craft projects that not only cater to today’s demands but also contribute to long-term community growth. We aim to establish NN Infra Developers as a symbol of excellence, trust, and innovation.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Exceeding Excellence</h2>
+            <p>We are committed to delivering top-quality infrastructure solutions that exceed client expectations and support sustainable development. Our approach integrates innovative technology, eco-conscious strategies, and meticulous planning to ensure excellence at every stage of our projects.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Core Values</h2>
+            <ul class="values">
+                <li><strong>Integrity:</strong> Upholding ethical standards with transparency and honesty.</li>
+                <li><strong>Excellence:</strong> Striving for precision and quality in all projects.</li>
+                <li><strong>Innovation:</strong> Embracing modern technology and creative solutions.</li>
+                <li><strong>Sustainability:</strong> Prioritizing eco-friendly practices for a greener future.</li>
+                <li><strong>Customer-Centricity:</strong> Keeping client needs at the heart of our operations.</li>
+                <li><strong>Teamwork:</strong> Fostering collaboration and valuing every contribution.</li>
+                <li><strong>Safety:</strong> Ensuring a secure work environment for all stakeholders.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    //navbar hamburger
+const hamburger = document.getElementById('hamburger');
+const navContent = document.getElementById('navContent');
+
+hamburger.addEventListener('click', () => {
+ navContent.classList.toggle('show'); // Toggle the 'show' class
+});
+
+// Close the nav content when clicking outside of it
+window.addEventListener('click', (event) => {
+ if (!hamburger.contains(event.target) && !navContent.contains(event.target)) {
+     navContent.classList.remove('show'); // Remove the 'show' class
+ }
+});
+ </script>
+
+</body>
+</html>
