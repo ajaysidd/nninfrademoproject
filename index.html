@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            opacity: 0.8;
+            border-radius: 10%;
+            margin: 0;
+            font-size: 6rem;
+        }
+        button {
+            cursor: pointer;
+            border-radius: 30px;
+            border: 2px solid rgb(249, 251, 251);
+            background-color: white;
+            color: rgb(22, 20, 20);
+            position: fixed;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.5s;
+            font-size: 2rem;
+            padding: 14px 28px;
+            
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+   
+        .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+ /* Responsive Design */
+ @media (max-width: 1200px) {
+            h1 { font-size: 5.5rem; }
+            button { font-size: 2.3rem; padding: 20px 40px; }
+        }
+        @media (max-width: 992px) {
+            h1 { font-size: 5rem; }
+            button { font-size: 2.2rem; padding: 18px 36px; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 4rem; }
+            button { font-size: 2rem; padding: 16px 32px; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            button { font-size: 1.8rem; padding: 14px 28px; }
+        }
+
+
+    </style>
+      <script>
+        function transitionPage() {
+            document.body.style.opacity = 0.9;
+            setTimeout(() => {
+                window.location.href = 'nextpage.html';
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <h1>NN INFRA DEVELOPERS</h1>
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="mainpage.mp4" type="video/mp4">
+      </video>
+      
+    
+    <button onclick="window.location.href='main1.html'">Visit Here</button>
+</body>
+</html>
