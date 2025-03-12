@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From the Desk Founder</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            background-size: cover;
+            background-position: absolute;
+            color: #f8f3f3;
+
+        }
+        
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f6f3;
+  padding: 10px;
+  position: relative;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height */
+}
+
+.hamburger {
+  font-size: 30px;
+  color: rgb(11, 10, 10);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-content {
+  display: flex; /* Display items in a row */
+  
+}
+
+.nav-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display items in a row */
+}
+
+.nav-content li {
+  padding: 10px;
+}
+
+.nav-content li a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(20, 19, 19);
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+}
+
+.nav-content li a:hover {
+  text-decoration: underline;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon on small screens */
+  }
+
+  .nav-content {
+      display: none; /* Hide nav content by default */
+      position: absolute;
+      background-color: #fbf8f8;
+      border-radius: 10px;
+      top: 50px; /* Adjust based on your navbar height */
+      right: 0; /* Align to the right end */
+      width: 200px; /* Set a width for the dropdown */
+      z-index: 1;
+  }
+
+  .nav-content ul {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-content.show {
+      display: flex; /* Show nav content when toggled */
+  }
+}
+        .container {
+            width: 90%;
+            height: 100vh;
+            margin: 70px auto;
+            padding: 20px;
+            background-image: url("");
+            background-size: cover;
+            background-position: fixed;
+            color: #000000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            background-color: #000000;
+            color: #ffffff;
+            font-family:'Times New Roman', Times, serif;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+        p {
+            line-height: 1.8;
+            font-family: "Quicksand", serif;
+             font-optical-sizing: auto;
+             font-weight: weight;
+             font-style: normal;
+             font-size: 1.5rem;
+        }
+        .highlight {
+            font-weight:bold;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+      <!-- Navigation Bar -->
+      <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" />
+        </div>
+        <div class="nav-content" id="navContent">
+            <ul>
+                <li><a href="main1.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="founder.html">Founder</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="values.html">Values</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>From the Desk Founder</h1>
+        <p>Since 2018, NN Infra Developers has been on a transformative journey, turning a visionary dream into reality. What began as a mission to redefine infrastructure development has flourished into a brand synonymous with <span class="highlight">innovation, quality, and sustainability</span>.</p>
+        
+        <p>At NN Infra Developers, we don’t just build projects—we create <span class="highlight">landmarks</span> that stand the test of time. Our dedication to understanding client needs and delivering beyond expectations has been the cornerstone of our success.</p>
+        
+        <p>Iconic developments like <span class="highlight">Green Valley</span> and <span class="highlight">Sree City Eco Resort & Farm Land</span> exemplify our unwavering commitment to excellence.</p>
+        
+        <p>As we move forward, we remain confident that with the unwavering support of our <span class="highlight">team, clients, and stakeholders</span>, NN Infra Developers will continue to reach new heights, shaping the future of infrastructure.</p>
+    </div>
+
+    <script>
+       //navbar hamburger
+  const hamburger = document.getElementById('hamburger');
+const navContent = document.getElementById('navContent');
+
+hamburger.addEventListener('click', () => {
+    navContent.classList.toggle('show'); // Toggle the 'show' class
+});
+
+// Close the nav content when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navContent.contains(event.target)) {
+        navContent.classList.remove('show'); // Remove the 'show' class
+    }
+});
+    </script>
+
+</body>
+</html>
